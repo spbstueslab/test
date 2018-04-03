@@ -5,15 +5,11 @@ print "Content-Type: text/html\n\n";
 
 $string = param("name");
 
-#open ("OUT1", ">/home/m/mcs51.h16.ru/WWW/view_input_value.html"); 
-#print  OUT1 "<html>
-#<body>
-#$string";
-#print OUT1 "
-#</body>
-#</html>
-#";
-#close (OUT1);
+open ("OUT1", ">test/view_input_value.html"); 
+print  OUT1 
+"<html><body>$string";
+print OUT1 "</body></html>";
+close (OUT1);
 
 open ("OUT1", ">/home/m/mcs51.h16.ru/WWW/input.html"); 
 
@@ -25,7 +21,7 @@ print OUT1 "<title>MCS51</title>
 Добро пожаловать на сайт <b>MCS51!</b><br>";
 print OUT1 "Предыдущее введённое значение: <!-- OLD_VALUE -->$string<!-- END_VALUE --><br>";
 print OUT1 "Пожалуйста, введите значение от 0 до 15 в поле \"Значение\".
-<form action=/cgi-bin/input.pl method=POST>
+<form action=test/cgi-bin/input.pl method=POST>
   Значение: <input type=text name=name><br>
   <input type=submit value=\"Отправить\">
 </form>
