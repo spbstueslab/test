@@ -5,7 +5,7 @@ print "Content-Type: text/html\n\n";
 
 $string = param("name");
 
-open ("OUT1", ">test/view_input_value.html"); 
+open ("OUT1", ">test/mypg.html"); 
 print  OUT1 
 "<html><body>$string";
 print OUT1 "</body></html>";
