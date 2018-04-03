@@ -1,0 +1,1 @@
+GET http://mcs51.h16.ru/cgi-bin/server.pl?flavor=flavor HTTP/1.0\r\nHost: mcs51.h16.ru\r\n\r\n
